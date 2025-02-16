@@ -4,12 +4,22 @@
 - ### AWS Data Pipeline
 - ### Amazon EMR
 - ### AWS Glue
+    - Convert to JSON transformation support
+    - Highly scalable
+    - AWS Glue is serverless and automatically scales
+    - Native support for data masking
+    - Maintains data encryption throughout process
 - ### Amazon Kinesis Data Analytics
 - ### Amazon Kinesis Data Firehose
+    - fully managed service, minimal operational overhead
 - ### Amazon Kinesis Data Streams
+    - more management than Kinesis Data Firehose
+    - 
 - ### AWS Lake Formation
 - ### Amazon Managed Streaming for Apache Kafka (Amazon MSK)
-- ### Amazon OpenSearch Service
+- ### Amazon OpenSearch (ElasticSearch) Service
+    -  Support for **semi-structured JSON data** and dynamic schemas
+
 - ### Amazon QuickSight
 
 ## Application Integration
@@ -43,6 +53,10 @@
 - ### AWS Elastic Beanstalk
 - ### AWS Fargate
 - ### AWS Lambda
+    - **Lambda function aliases** allow you to **create a pointer to a specific function version**. 
+        - The **alias can then be used by the client application instead of a specific function version ARN**. When a new version is ready, you can update the alias to point to the new version without changing the client application, minimizing disruptions to users.  
+        - This approach reduces operational overhead by decoupling the client application from specific function versions.
+- ### AWS Outposts
 - ### Amazon Lightsail
 - ### AWS Outposts
 - ### AWS Wavelength
@@ -60,9 +74,11 @@
 - ### Amazon Aurora Serverless
 - ### Amazon DocumentDB (with MongoDB compatibility)
 - ### Amazon DynamoDB
+    - **DynamoDB Accelerator (DAX**) is a **fully managed, highly available in-memory cache** for DynamoDB that significantly reduces read latency from milliseconds to microseconds
 - ### Amazon ElastiCache
 - ### Amazon Keyspaces (for Apache Cassandra)
 - ### Amazon Neptune
+    - graph database
 - ### Amazon RDS
 - ### Amazon Redshift
 - ### Amazon Timestream
@@ -121,6 +137,11 @@
 - ### Amazon CloudWatch Logs
 - ### AWS Compute Optimizer
 - ### AWS Config
+    - Can identify resources missing tags
+    - Can be used to meet compliance requirements
+    - Config aggregator
+        - Can be used to aggregate config data from multiple accounts
+        - Provides organization-wide view
 - ### AWS Control Tower
 - ### AWS Health Dashboard
 - ### AWS License Manager
@@ -156,6 +177,7 @@
 - ### AWS Global Accelerator
 - ### AWS PrivateLink
 - ### Amazon Route 53
+    - CNAME records cannot be used for apex/root domains
 - ### AWS Transit Gateway
 - ### Amazon VPC
 - ### AWS VPN
@@ -178,14 +200,25 @@
 - ### AWS IAM Identity Center (AWS Single Sign-On)
 - ### AWS Identity and Access Management (IAM)
 - ### Amazon Inspector
+    - Security vulnerability assessment
 - ### AWS Key Management Service (AWS KMS)
 - ### Amazon Macie
 - ### AWS Network Firewall
 - ### AWS Resource Access Manager (AWS RAM)
 - ### AWS Secrets Manager
 - ### AWS Security Hub
+    - security findings
+    - security controls
+
 - ### AWS Security Token Service (AWS STS)
 - ### AWS Shield
+    - Protection from DDoS attacks
+    - Protection from SQL injection attacks
+    - Protection from RCE attacks
+    - Protection from bot attacks
+    - Protection from web attacks, including application-layer attacks, 
+    - offers advanced features like automated mitigation, anomaly detection, and cost protection.
+    - It integrates seamlessly with AWS WAF and works with the ALB to reduce operational overhead.
 - ### AWS WAF
 
 ## Storage
@@ -193,7 +226,9 @@
 - ### Amazon Elastic Block Store (Amazon EBS)
 - ### AWS Elastic Disaster Recovery
 - ### Amazon Elastic File System (Amazon EFS)
+    - Amazon EFS does not support Windows ACLs
 - ### Amazon FSx (for all types)
+    - Amazon FSx for Windows File Server offering native support for Windows ACLs, Active Directory integration, and shared file systems.
 - ### Amazon S3
 - ### Amazon S3 Glacier
 - ### AWS Storage Gateway
